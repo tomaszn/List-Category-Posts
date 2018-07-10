@@ -36,13 +36,12 @@ while ( have_posts() ):
   the_post();
 
   $lcp_display_output .= "<li>";
+
   //Start a link to the contents on the same page
-  $lcp_display_output .= '<a href="#post-' . $this->ID . '">';
-
-  //Show the title and link to the post:
-  $lcp_display_output .= $this->get_post_title($post, 'h3', 'lcp_post');
-
+  $lcp_display_output .= '<a href="#post-' . get_the_ID() . '">';
+  $lcp_display_output .= get_the_title();
   $lcp_display_output .= '</a>';
+
   $lcp_display_output .= '</li>';
 endwhile;
 
